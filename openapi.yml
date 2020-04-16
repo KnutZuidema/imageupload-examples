@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  version: 0.0.1
+  title: Image Upload Example
+  license:
+    name: MIT
+paths:
+  /upload:
+    put:
+      summary: upload an image to the server
+      operationId: imageUpload
+      requestBody:
+        $ref: '#/components/requestBodies/File'
+      responses:
+        400:
+          $ref: '#/components/responses/BadRequest'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+        204:
+          description: request was successful
+components:
+  responses:
+    BadRequest:
+      description: request did not conform to the requirements
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    InternalServerError:
+      description: the server messed up. it wasn't you!
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  requestBodies:
+    File:
+      description: binary file
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              image:
+                format: binary
+  schemas:
+    Error:
+      description: error response with a human readable message
+      type: object
+      properties:
+        message:
+          type: string
+
