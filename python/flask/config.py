@@ -1,0 +1,4 @@
+FORM_IMAGE_KEY = 'image'
+MAX_CONTENT_LENGTH = 20 << 20  # 20 MB
+HOST = '0.0.0.0'
+PORT = 3579
