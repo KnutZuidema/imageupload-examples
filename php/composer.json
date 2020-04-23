@@ -1,0 +1,16 @@
+{
+  "name": "knutzuidema/imageupload",
+  "description": "rest API endpoint for uploading image",
+  "type": "project",
+  "require": {
+    "ext-json": "*",
+    "ext-http": "*"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Knut Zuidema",
+      "email": "me@knutzuidema.de"
+    }
+  ]
+}
