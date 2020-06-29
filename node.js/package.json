@@ -1,0 +1,30 @@
+{
+    "name": "imageupload",
+    "version": "0.0.1",
+    "description": "Example for uploading a file to a server",
+    "main": "index.ts",
+    "scripts": {
+        "start": "node dist/index.js",
+        "prestart": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/KnutZuidema/imageupload-examples.git"
+    },
+    "author": "Knut Zuidema",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/KnutZuidema/imageupload-examples/issues"
+    },
+    "homepage": "https://github.com/KnutZuidema/imageupload-examples#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "formidable": "^1.2.2"
+    },
+    "devDependencies": {
+        "@types/formidable": "^1.0.31",
+        "@types/express": "^4.17.6",
+        "typescript": "^3.8.3"
+    }
+}
